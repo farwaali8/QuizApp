@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -40,9 +41,15 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.nav_quiz:
                         showToast("Quiz Selected");
+                        // Open QuizActivity
+                        Intent quizIntent = new Intent(MainActivity.this, QuizActivity.class);
+                        startActivity(quizIntent);
                         break;
                     case R.id.nav_result:
                         showToast("Result Selected");
+                        // Open QuizActivity
+                        Intent resultIntent = new Intent(MainActivity.this, ResultActivity.class);
+                        startActivity(resultIntent);
                         break;
 
                 }
